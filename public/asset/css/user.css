@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    background: #f5f6fa;
+}
+
+/* TOPBAR */
+.topbar {
+    background: white;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* CONTENT */
+.content {
+    padding: 20px;
+}
+
+/* PRODUK */
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card button {
+    margin-top: 10px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+/* SEARCH BAR */
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    width: 220px;
+}
+
+.search-box button {
+    padding: 8px 16px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #2f4ed8;
+}
+
+/* tombol action umum (dipakai edit, hapus, tambah) */
+.btn-action {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+}
+
+/* wrapper tombol atas */
+.action-top {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+/* wrapper tengah */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* card form */
+.form-card {
+    background: #fff;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* judul */
+.form-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* group input */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2ecc71;
+}
+
+/* action button */
+.form-action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* tombol utama */
+.btn-action {
+    background: #2ecc71;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* tombol kembali */
+.btn-secondary {
+    background: #bdc3c7;
+    color: #2c3e50;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* === MODAL BACKGROUND === */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* === MODAL BOX === */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* IMAGE */
+.modal-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* PRICE */
+.modal-content .harga {
+    font-weight: bold;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+/* CLOSE BUTTON */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* BUTTON DETAIL */
+.btn-detail {
+    margin-top: 10px;
+    width: 100%;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sidebar list */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Sidebar link (Dashboard, Sepatu, Logout) */
+.sidebar-link {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.sidebar-link:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* HILANGKAN STYLE BUTTON DEFAULT */
+.btn-logout {
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.produk-img {
+    width: 100%;
+    height: 200px;      /* semua gambar jadi sama tinggi */
+    object-fit: cover; /* kunci biar rapi & gak gepeng */
+    border-radius: 8px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 220px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: black;
+}
+
+.search-btn {
+    padding: 8px 14px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+    background-color: black;
+}
+
+/* === WHATSAPP INFO DI MODAL === */
+.modal-content .contact-wa {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.modal-content .contact-wa strong {
+    color: #2ecc71; /* nyambung sama warna harga */
+}
+
+.alert-success {
+    background: black;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
