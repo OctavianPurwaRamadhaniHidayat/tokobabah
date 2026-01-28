@@ -5,6 +5,8 @@
     <title>@yield('title', 'Toko Babah')</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('asset/assets/favicon.ico') }}" />
     <link rel="stylesheet" href="{{ asset('asset/css/user.css') }}">
+    {{-- Vite CSS & JS --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
 
